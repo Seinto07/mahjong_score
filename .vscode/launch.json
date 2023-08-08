@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "src.Main",
+      "projectName": "cal_mahjong_score_2217ecfd"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
