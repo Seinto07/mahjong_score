@@ -77,7 +77,7 @@ public class Main {
             rank[loserRank - 1].addScore(-score);
         } else {
             // 払う点数 親:pay[0] 子:pay[1]
-            int[] pay = ScoreCalculator.CalTumoScore(isDealer, han, mark); 
+            int[] pay = ScoreCalculator.calTumoScore(isDealer, han, mark); 
             if (isDealer) {
                 System.out.println(pay[1] + "オール");
                 rank[winnerRank - 1].addScore(pay[1] * 3);
