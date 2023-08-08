@@ -1,0 +1,4 @@
+player4 42000 W
+player1 31000 N
+player2 20900 S
+player3 6100 E
