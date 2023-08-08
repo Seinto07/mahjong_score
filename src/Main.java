@@ -22,7 +22,7 @@ public class Main {
         int howWin = 0;
         Scanner scanner = new Scanner(System.in);
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("score.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/score.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(" ");
@@ -56,9 +56,11 @@ public class Main {
         System.out.print("翻数:");
         han = scanner.nextInt();
 
-        System.out.println("上がり方は? メンゼンロン...0 ツモ...1 ロン...0,1以外");
-        System.out.print("上がり方:");
-        howWin = scanner.nextInt();
+        if (han < 13) {
+            System.out.println("上がり方は? メンゼンロン...0 ツモ...1 ロン...0,1以外");
+            System.out.print("上がり方:");
+            howWin = scanner.nextInt();
+        }
 
         if (han <= 4) {
             mark = MarkCalculator.calMark(howWin);
@@ -120,7 +122,7 @@ public class Main {
         }
     
         // ファイルの更新
-        try (FileWriter writer = new FileWriter("task12-1.txt")) {
+        try (FileWriter writer = new FileWriter("src/score.txt")) {
             for (int i = 0; i < NUMBER; i++) {
                 writer.write(rank[i].getName() + " " + rank[i].getHaveScore() + " " + rank[i].getWind() + "\n");
             }
