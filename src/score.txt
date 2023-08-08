@@ -1,0 +1,4 @@
+player1 2500 W
+player2 2500 N
+player3 2500 S
+player4 2500 E
