@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.Year;
 import java.util.Scanner;
 
 /** @class Main
@@ -16,6 +17,7 @@ public class Main {
     public static void main(String[] args) {
         final int NUMBER = 4; 
         Player[] rank = new Player[NUMBER];
+        final char[] winds = {'E', 'S', 'W', 'N'};
         String name;
         int nowScore = 0;
         int n = 0;
@@ -27,7 +29,23 @@ public class Main {
         int loserRank = 0;
         boolean isDealer = false;
         int howWin = 0;
+        int initialize = 0;
         Scanner scanner = new Scanner(System.in);
+
+        // 初期化に関する処理
+        System.out.println("点数を初期化しますか？初期化...1");
+        initialize = scanner.nextInt();
+        if (initialize == 1) {
+            // ファイルの更新
+            try (FileWriter writer = new FileWriter("score.txt")) {
+                for (int i = 0; i < NUMBER; i++) {
+                    writer.write("player"+ (i + 1) + " " + 25000 + " " + winds[i]  + "\n");
+                }
+                writer.close();
+            } catch (IOException e) {
+                System.out.println("ファイルを書き込めません。");
+            }
+        }
 
         try (BufferedReader reader = new BufferedReader(new FileReader("score.txt"))) {
             String line;

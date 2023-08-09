@@ -1,4 +1,4 @@
-player2 10500 W
-player1 2500 N
-player3 2500 E
-player4 -5500 S
+player1 25000 E
+player2 25000 S
+player3 25000 W
+player4 25000 N
