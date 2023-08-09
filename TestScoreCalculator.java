@@ -1,4 +1,8 @@
-
+/** @file TestScoreCalculator.java
+ * @brief TestScoreCalculatorのテストに関するファイル
+ * @date 2023/08/08
+ * @author Seiya Takahashi
+ */
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;

@@ -1,5 +1,5 @@
-/** @file MarkCaluculator.java
- * @brief 符計算に関するクラス
+/** @file MarkCalculator.java
+ * @brief 符計算に関するファイル
  * @date 2023/08/08
  * @author Seiya Takahashi
  */

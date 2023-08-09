@@ -68,12 +68,12 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="_score_calculator_8java.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/** @file ScoreCalculator.java</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * @brief 点数計算に関するクラス</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * @brief 点数計算に関するファイル</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * @date 2023/08/08</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * @author Seiya Takahashi</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> /** @class ScoreCalculator</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/** @class ScoreCalculator</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * @brief 点数計算に関するクラス</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_score_calculator.html">   10</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_score_calculator.html">ScoreCalculator</a> {</div>
@@ -86,7 +86,7 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">     * @param mark (int): 符</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">     * @return int[]: int[0]...親が払う点数 int[1]...子が払う点数</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span>[] calTumoScore(<span class="keywordtype">boolean</span> isDealer, <span class="keywordtype">int</span> han, <span class="keywordtype">int</span> mark) {</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_score_calculator.html#aac0cf0f9b6589d2c773ee7ddcbe5ebc8">   20</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span>[] <a class="code" href="class_score_calculator.html#aac0cf0f9b6589d2c773ee7ddcbe5ebc8">calTumoScore</a>(<span class="keywordtype">boolean</span> isDealer, <span class="keywordtype">int</span> han, <span class="keywordtype">int</span> mark) {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">// 親のツモ点数表（払う点数） 1翻 2翻 3翻 4翻</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">final</span> <span class="keywordtype">int</span>[][] TABLE_DEALER = {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                { 0, 700, 1300, 2600 }, <span class="comment">// 20符</span></div>
@@ -192,7 +192,7 @@ $(function() {
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">     * @param mark (int): 符</span></div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">     * @return int</span></div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> calRonScore(<span class="keywordtype">boolean</span> isDealer, <span class="keywordtype">int</span> han, <span class="keywordtype">int</span> mark) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="class_score_calculator.html#aab3aed06e5c2297a17581bdf57a0f1c8">  126</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_score_calculator.html#aab3aed06e5c2297a17581bdf57a0f1c8">calRonScore</a>(<span class="keywordtype">boolean</span> isDealer, <span class="keywordtype">int</span> han, <span class="keywordtype">int</span> mark) {</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="comment">// 親のロン点数表 1翻 2翻 3翻 4翻</span></div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">final</span> <span class="keywordtype">int</span>[][] TABLE_DEALER = {</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                { 1500, 2900, 5800, 11600 }, <span class="comment">// 30符</span></div>
@@ -263,6 +263,8 @@ $(function() {
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
 <div class="ttc" id="aclass_score_calculator_html"><div class="ttname"><a href="class_score_calculator.html">ScoreCalculator</a></div><div class="ttdoc">点数計算に関するクラス</div><div class="ttdef"><b>Definition:</b> <a href="_score_calculator_8java_source.html#l00010">ScoreCalculator.java:10</a></div></div>
+<div class="ttc" id="aclass_score_calculator_html_aab3aed06e5c2297a17581bdf57a0f1c8"><div class="ttname"><a href="class_score_calculator.html#aab3aed06e5c2297a17581bdf57a0f1c8">ScoreCalculator.calRonScore</a></div><div class="ttdeci">static int calRonScore(boolean isDealer, int han, int mark)</div><div class="ttdoc">ロンで上がったときの点数を計算する</div><div class="ttdef"><b>Definition:</b> <a href="_score_calculator_8java_source.html#l00126">ScoreCalculator.java:126</a></div></div>
+<div class="ttc" id="aclass_score_calculator_html_aac0cf0f9b6589d2c773ee7ddcbe5ebc8"><div class="ttname"><a href="class_score_calculator.html#aac0cf0f9b6589d2c773ee7ddcbe5ebc8">ScoreCalculator.calTumoScore</a></div><div class="ttdeci">static int[] calTumoScore(boolean isDealer, int han, int mark)</div><div class="ttdoc">ツモで上がったときに親と子が払う点数を計算する</div><div class="ttdef"><b>Definition:</b> <a href="_score_calculator_8java_source.html#l00020">ScoreCalculator.java:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

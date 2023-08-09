@@ -1,5 +1,5 @@
 /** @file Main.java
- * @brief 点数計算を実行する
+ * @brief 点数計算を実行するファイル
  * @date 2023/08/08
  * @author Seiya Takahashi
  */
@@ -29,7 +29,7 @@ public class Main {
         int howWin = 0;
         Scanner scanner = new Scanner(System.in);
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("src/score.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("score.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(" ");
@@ -108,7 +108,7 @@ public class Main {
         if (!isDealer) {
             System.out.println("親を更新します。");
             for (int i = 0; i < NUMBER; i++) {
-                rank[i].changeWind(rank[i].getWind());
+                rank[i].changeWind();
             }
         }
 
@@ -129,7 +129,7 @@ public class Main {
         }
     
         // ファイルの更新
-        try (FileWriter writer = new FileWriter("src/score.txt")) {
+        try (FileWriter writer = new FileWriter("score.txt")) {
             for (int i = 0; i < NUMBER; i++) {
                 writer.write(rank[i].getName() + " " + rank[i].getHaveScore() + " " + rank[i].getWind() + "\n");
             }

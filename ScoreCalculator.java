@@ -1,10 +1,10 @@
 /** @file ScoreCalculator.java
- * @brief 点数計算に関するクラス
+ * @brief 点数計算に関するファイル
  * @date 2023/08/08
  * @author Seiya Takahashi
  */
 
- /** @class ScoreCalculator
+/** @class ScoreCalculator
  * @brief 点数計算に関するクラス
  */
 public class ScoreCalculator {
@@ -17,7 +17,7 @@ public class ScoreCalculator {
      * @param mark (int): 符
      * @return int[]: int[0]...親が払う点数 int[1]...子が払う点数
      */
-    static int[] calTumoScore(boolean isDealer, int han, int mark) {
+    public static int[] calTumoScore(boolean isDealer, int han, int mark) {
         // 親のツモ点数表（払う点数） 1翻 2翻 3翻 4翻
         final int[][] TABLE_DEALER = {
                 { 0, 700, 1300, 2600 }, // 20符
@@ -123,7 +123,7 @@ public class ScoreCalculator {
      * @param mark (int): 符
      * @return int
      */
-    static int calRonScore(boolean isDealer, int han, int mark) {
+    public static int calRonScore(boolean isDealer, int han, int mark) {
         // 親のロン点数表 1翻 2翻 3翻 4翻
         final int[][] TABLE_DEALER = {
                 { 1500, 2900, 5800, 11600 }, // 30符

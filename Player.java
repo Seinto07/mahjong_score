@@ -1,7 +1,7 @@
 /** @file Player.java
- *  @brief プレイヤに関するクラス
- *  @date 2023/08/08
- *  @author Seiya Takahashi
+ * @brief プレイヤに関するファイル
+ * @date 2023/08/08
+ * @author Seiya Takahashi
  */
 
 /** @class Player
@@ -81,10 +81,10 @@ public class Player {
      * @brief 自風を次の風に変える
      * @param wind (char): 自風
      */
-    public void changeWind(char wind) {
-        if (wind == 'E') this.wind = 'N';
-        else if (wind == 'S') this.wind = 'E';
-        else if (wind == 'W') this.wind = 'S';
-        else if (wind == 'N') this.wind = 'W';
+    public void changeWind() {
+        if (this.wind == 'E') this.wind = 'N';
+        else if (this.wind == 'S') this.wind = 'E';
+        else if (this.wind == 'W') this.wind = 'S';
+        else if (this.wind == 'N') this.wind = 'W';
     }
 }
