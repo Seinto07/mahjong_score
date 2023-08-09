@@ -1,8 +1,21 @@
-package src;
+/** @file MarkCaluculator.java
+ * @brief 符計算に関するクラス
+ * @date 2023/08/08
+ * @author Seiya Takahashi
+ */
+
 import java.util.Scanner;
 
+/** @class MarkCalculator
+ * @brief 符計算に関するクラス
+ */
 public class MarkCalculator {
 
+    /** @fn calMark(int howWin)
+     * @brief 必要な情報を尋ねて符計算を行う
+     * @param howWin (int): 上がり方 メンゼンロン...0 ツモ...1 ロン...0,1以外
+     * @return int: 符
+     */
     public static int calMark(int howWin) {
         Scanner scanner = new Scanner(System.in);
         int mark = 20;
@@ -85,6 +98,11 @@ public class MarkCalculator {
         return mark;
     }
 
+    /** @fn roundUp(int x)
+     * @brief xの位置の位を切り上げる
+     * @param x (int): 整数
+     * @return int
+     */
     private static int roundUp(int x) {
         if (x % 10 == 0) {
             return x;

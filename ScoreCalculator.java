@@ -1,8 +1,22 @@
-package src;
+/** @file ScoreCalculator.java
+ * @brief 点数計算に関するクラス
+ * @date 2023/08/08
+ * @author Seiya Takahashi
+ */
 
+ /** @class ScoreCalculator
+ * @brief 点数計算に関するクラス
+ */
 public class ScoreCalculator {
     private static final int MANGAN = 8000;
 
+    /** @fn calTumoScore(boolean isDealer, int han, int mark)
+     * @brief ツモで上がったときに親と子が払う点数を計算する
+     * @param isDealer (boolean): 上がった人が親かどうか
+     * @param han (int): 翻数
+     * @param mark (int): 符
+     * @return int[]: int[0]...親が払う点数 int[1]...子が払う点数
+     */
     static int[] calTumoScore(boolean isDealer, int han, int mark) {
         // 親のツモ点数表（払う点数） 1翻 2翻 3翻 4翻
         final int[][] TABLE_DEALER = {
@@ -90,11 +104,11 @@ public class ScoreCalculator {
     
         if (5 <= han) {
             if (isDealer) {
-                score = (int)(score * 1.5);    //親なら1.5倍
+                score = (int)(score * 1.5);    
                 pay[0] = 0;
                 pay[1] = score / 3;
             } else {
-                pay[0] = score / 2;   //親は子の二倍払う
+                pay[0] = score / 2;   
                 pay[1] = score / 4; 
             }
         }
@@ -102,6 +116,13 @@ public class ScoreCalculator {
         return pay;
     }
 
+    /** @fn calRonScore(boolean isDealer, int han, int mark)
+     * @brief ロンで上がったときの点数を計算する
+     * @param isDealer (boolean): 上がった人が親かどうか
+     * @param han (int): 翻数
+     * @param mark (int): 符
+     * @return int
+     */
     static int calRonScore(boolean isDealer, int han, int mark) {
         // 親のロン点数表 1翻 2翻 3翻 4翻
         final int[][] TABLE_DEALER = {
@@ -166,7 +187,7 @@ public class ScoreCalculator {
             score = MANGAN * 4;        //数え役満
         }
 
-        if (isDealer) score = (int)(score * 1.5); //親なら1.5倍
+        if (isDealer) score = (int)(score * 1.5); 
 
         return score;
     }

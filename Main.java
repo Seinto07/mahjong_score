@@ -1,13 +1,20 @@
-package src;
+/** @file Main.java
+ * @brief 点数計算を実行する
+ * @date 2023/08/08
+ * @author Seiya Takahashi
+ */
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
+/** @class Main
+ * @brief 点数計算を実行するクラス
+ */
 public class Main {
     public static void main(String[] args) {
-        final int NUMBER = 4; // プレーヤーの数
+        final int NUMBER = 4; 
         Player[] rank = new Player[NUMBER];
         String name;
         int nowScore = 0;
