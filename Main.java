@@ -13,8 +13,8 @@ import java.util.Scanner;
  * @brief 点数計算を実行するクラス
  */
 public class Main {
+    static final int NUMBER = 4;
     public static void main(String[] args) {
-        final int NUMBER = 4; 
         Player[] rank = new Player[NUMBER];
         final char[] winds = {'E', 'S', 'W', 'N'};
         String name;
